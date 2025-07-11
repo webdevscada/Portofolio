@@ -1,0 +1,81 @@
+/* ====== Global ====== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eef2f3;
+  margin: 0;
+  padding: 2rem;
+  color: #333;
+}
+
+/* ====== Container ====== */
+.Tidal-container {
+  display: flex;
+  flex-wrap: wrap;                 /* agar responsif */
+  background-color: #f9fff8;
+  border: 2px solid #4caf50;       /* garis tepi hijau */
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  align-items: center;             /* vertikal rata tengah */
+  gap: 1rem;                       /* jarak antara gambar & teks */
+}
+
+/* ====== Gambar (kiri) ====== */
+.Tidal-image {
+  flex: 0 0 35%;                   /* lebar ±35% */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Tidal-image img {
+  width: 100%;
+  max-width: 300px;                /* batasi agar tak terlalu besar */
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ====== Deskripsi (kanan) ====== */
+.biogas-description {              /* gunakan class yg sudah ada di HTML */
+  flex: 1 1 60%;                   /* sisa ruang */
+  padding: 1rem;
+  text-align: justify;
+}
+
+.biogas-description h2 {
+  color: #2e7d32;
+  margin-top: 0;
+}
+
+.biogas-description p {
+  line-height: 1.6;
+}
+
+.biogas-description a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #388e3c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.biogas-description a:hover {
+  text-decoration: underline;
+}
+
+/* ====== Responsif (≤768 px) ====== */
+@media screen and (max-width: 768px) {
+  .Tidal-container {
+    flex-direction: column;        /* gambar di atas, teks di bawah */
+    text-align: center;
+  }
+  .Tidal-image {
+    flex: 1 1 100%;
+  }
+  .biogas-description {
+    flex: 1 1 100%;
+  }
+}
